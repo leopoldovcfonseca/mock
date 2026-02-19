@@ -23,7 +23,7 @@ import platform
 import datetime
 
 #############
-pi.PAUSE=0.4
+pi.PAUSE=0.5
 pi.FAILSAFE=True
 #############
 
@@ -70,21 +70,21 @@ def close_wins_2(tit):
 def camada(login,senha,dir1, oper, ue, local, ano, uo, od, ptrab, nat_desp, item, fonte):
     
         
-    if time_in_interval('2000','0800'):
+    if time_in_interval('2000','0700'):
         resp='Fora do Horario operacional SIAFI'
         print(resp)
         return ["NOK",'Night']
     
     
     contador=0
-    #ano='2024'
+    #ano='2026'
     
     
 # =============================================================================
 #     if oper=="Pagamento - Restos a pagar":
 #         ano_1=int(ano)-1
 #         ano_rp=ano_1
-#         #ano_rp=pi.prompt('Informe o ano do restos a Pagar', title='Restos a pagar', default='2023')
+#         #ano_rp=pi.prompt('Informe o ano do restos a Pagar', title='Restos a pagar', default='2024')
 #         #if ano_rp=="Cancel":
 #             #sys.exit()
 #     else:
@@ -94,7 +94,7 @@ def camada(login,senha,dir1, oper, ue, local, ano, uo, od, ptrab, nat_desp, item
     
     
     if oper=="Pagamento - Restos a pagar":
-        ano_rp=pi.prompt('Informe o ano do restos a Pagar', title='Restos a pagar', default='2023')
+        ano_rp=pi.prompt('Informe o ano do restos a Pagar', title='Restos a pagar', default='2024')
         if ano_rp=="Cancel":
             sys.exit()
     else:
@@ -1326,9 +1326,9 @@ def siafi():
     # PARAMETROS #######
     ue="1080012" # A unidade executora para o Dativo Administrativo é 1080012.
     local="itautec"
-    #ano='2024'
+    #ano='2026'
     uo="1081" #unidade orcamentaria = uo
-    od="1120530" # Dra Karem PT  #ordenador de despesa --> Era od="10606119" # Dr Fabio PT
+    od="1050979" # Dr Rodolpho PT  #ordenador de despesa --> Era od="10606119" # Dr Fabio PT
     
     #ptrab='10140001'
     ptrab='78030001'  # NOVO Prog trabalho --> Era ptrab='10140001'
